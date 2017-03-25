@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace School.Models.Models
+namespace School.Models
 {
     public class ExamResult
     {
-        public int ExamId { get; set; }
+        [Key, Column(Order = 1)]
+        public int ExamID { get; set; }
 
-        public int StudentId { get; set; }
+        [Key, Column(Order = 2)]
+        public int StudentID { get; set; }
 
-        public int CourseId { get; set; }
+        [Key, Column(Order = 3)]
+        public int CourseID { get; set; }
 
         public int Marks { get; set; }
 

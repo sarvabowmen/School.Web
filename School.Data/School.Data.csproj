@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E60469E-7DF8-48C4-BAE6-A9CCB207DF00}</ProjectGuid>
+    <ProjectGuid>{626EA42F-8341-463E-A86A-9E0C9BB391FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>School.Models</RootNamespace>
-    <AssemblyName>School.Models</AssemblyName>
+    <RootNamespace>School.Data</RootNamespace>
+    <AssemblyName>School.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,16 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Exam.cs" />
-    <Compile Include="Models\ExamResult.cs" />
-    <Compile Include="Models\ExamType.cs" />
-    <Compile Include="Models\GradeSection.cs" />
-    <Compile Include="Models\Grade.cs" />
-    <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserSections.cs" />
+    <Compile Include="Configurations\UserSectionConfiguration.cs" />
+    <Compile Include="SchoolDbContext.cs" />
+    <Compile Include="Configurations\ExamTypeConfiguration.cs" />
+    <Compile Include="Configurations\ExamConfiguration.cs" />
+    <Compile Include="Configurations\ExamResultConfiguration.cs" />
+    <Compile Include="Configurations\GradeSectionConfiguration.cs" />
+    <Compile Include="Configurations\UserConfiguration.cs" />
+    <Compile Include="Configurations\GradeConfiguration.cs" />
+    <Compile Include="Configurations\CourseConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\School.Models\School.Models.csproj">
+      <Project>{3e60469e-7df8-48c4-bae6-a9ccb207df00}</Project>
+      <Name>School.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

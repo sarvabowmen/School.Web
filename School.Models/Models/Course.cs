@@ -8,12 +8,12 @@ namespace School.Models
 {
     public class Course
     {
-        public int CourseId { get; set; }
+        public int CourseID { get; set; }
 
         public string CourseName { get; set; }
 
         public string CourseDesc { get; set; }
 
-        public int GradeId { get; set; }
+        public Grade Grade { get; set; }
     }
 }

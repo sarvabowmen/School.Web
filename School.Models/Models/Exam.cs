@@ -4,7 +4,9 @@ namespace School.Models
 {
     public class Exam
     {
-        public int ExamId { get; set; }
+        public int ExamID { get; set; }
+
+        public ExamType ExamType { get; set; }
 
         public int ExamTypeId { get; set; }
 
